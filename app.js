@@ -37,11 +37,14 @@ const displayPhone = phones => {
         phoneContainer.appendChild(phoneDiv);
 
     })
-
+    toggleLoader(false);
 }
 
 
 document.getElementById("btn-search").addEventListener('click', function () {
+
+    toggleLoader(true);
+
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
     searchField.value = '';
@@ -50,3 +53,11 @@ document.getElementById("btn-search").addEventListener('click', function () {
 
 })
 
+const toggleLoader = isLoading => {
+    const loadersection = document.getElementById('loader');
+
+    if (isLoading) loadersection.classList.remove('d-none');
+
+
+
+}
