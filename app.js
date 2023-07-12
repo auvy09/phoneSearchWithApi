@@ -57,7 +57,7 @@ const toggleLoader = isLoading => {
     const loadersection = document.getElementById('loader');
 
     if (isLoading) loadersection.classList.remove('d-none');
-
+    else loadersection.classList.add('d-none');
 
 
 }
